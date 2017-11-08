@@ -11,6 +11,16 @@ sudo apt-get install gcc
 sudo apt-get install dkms
 sudo sh ./VBoxLinuxAdditions.run
 
+## apparemment, cela n'est pas suffisant : 
+sudo mount /dev/cdrom /mnt
+cd /mnt
+./VBoxLinuxAdditions.run 
+sudo ./VBoxLinuxAdditions.run 
+reboot
+
+# to get the shared folder working :
+sudo usermod -a -G vboxsf manuel
+
 ## editors
 sudo apt-get install vim
 sudo apt-get install vim-gtk
